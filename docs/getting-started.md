@@ -6,13 +6,14 @@ sidebar_position: 1
 
 # Getting Started
 
-**docs-publisher** is an MCP connector that lets Claude write, edit and delete tutorials in a Git-based documentation site (Docusaurus, MkDocs, VitePress, Docsify, GitBook Git-sync, and similar). Claude commits Markdown files to your docs repository on GitHub, and your site's normal build and deploy pipeline publishes them.
+**docs-publisher** is an MCP connector that lets Claude write, edit and delete tutorials in a Git-based documentation site (Docusaurus, MkDocs, VitePress, Docsify, GitBook Git-sync, and similar). Claude commits Markdown files to your docs repository on GitHub. Your site's normal build and deploy pipeline then publishes them, or Claude can rebuild and publish the site itself with `deploy_site`.
 
 By the end of this tutorial you will have:
 
 1. A GitHub token that can write to your docs repo
 2. The connector installed and registered with Claude
 3. Your first tutorial published, both directly and through a pull request
+4. Optionally, Claude deploying your site so new tutorials go live straight away
 
 ## Prerequisites
 
@@ -43,7 +44,7 @@ From the connector's folder, install its dependencies:
 npm install
 ```
 
-Run the built-in test to confirm everything works. It uses a fake GitHub API, so it needs no token or network access:
+Run the built-in test to confirm everything works. It uses a fake GitHub API and a fake shell, so it needs no token or network access:
 
 ```bash
 npm test
@@ -53,7 +54,7 @@ You should see `All smoke tests passed`.
 
 ## Step 3: Configure it
 
-The connector reads four settings:
+The connector reads these settings:
 
 | Variable | Required | Default | Meaning |
 | --- | --- | --- | --- |
@@ -61,6 +62,8 @@ The connector reads four settings:
 | `DOCS_REPO` | yes | – | Your docs repo as `owner/name` |
 | `DOCS_BRANCH` | no | `main` | The branch your site is built from |
 | `DOCS_DIR` | no | `docs` | The folder that holds tutorials (`""` for the repo root) |
+| `SITE_DIR` | no | – | A local clone of your docs repo; turns on `deploy_site` (Step 8) |
+| `DEPLOY_COMMAND` | no | `npm run deploy` | The command `deploy_site` runs in `SITE_DIR` |
 
 You can supply them in either of two places.
 
@@ -126,7 +129,7 @@ Claude calls `publish_tutorial`, which:
 - adds front matter (`title`, and `description` and `sidebar_position` when given) if the content has none,
 - commits it to `DOCS_BRANCH` and replies with a link to the file on GitHub.
 
-Your site's deploy pipeline picks up the commit just as it would one you pushed yourself.
+If your site deploys automatically on every push, the commit goes live just as one you pushed yourself would. If it doesn't, Claude can deploy it for you (Step 8).
 
 :::note
 If your repo was empty, this first publish must be a direct commit. A pull request needs a base branch to start from, and an empty repo doesn't have one yet.
@@ -140,6 +143,41 @@ For anything you want to check before it goes live, ask for a pull request:
 
 With `as_pull_request`, the connector pushes to a new `claude/...` branch and opens a PR against `DOCS_BRANCH`. Your live site doesn't change until you merge it. Every write tool supports this option.
 
+## Step 8: Deploy the site from Claude
+
+Skip this step if a CI workflow, such as GitHub Actions, already deploys your site on every push.
+
+Otherwise, `deploy_site` lets Claude rebuild the site and publish it. It runs on the computer where the connector runs, in two steps:
+
+1. `git pull --ff-only` in `SITE_DIR`, to fetch the tutorials Claude committed through GitHub.
+2. `DEPLOY_COMMAND` (default `npm run deploy`), to build the site and publish it.
+
+To set it up:
+
+1. Clone your docs repo and install the site's dependencies:
+
+   ```bash
+   git clone https://github.com/your-name/your-docs.git
+   ```
+
+   ```bash
+   cd your-docs && npm install
+   ```
+
+2. Run `npm run deploy` once yourself, to confirm the deploy works and Git can push. For Docusaurus, this pushes the build to the `gh-pages` branch. Set `GIT_USER` to your GitHub username first; the connector sets it for you later.
+3. Add `SITE_DIR` to your settings with the clone's full path, for example `SITE_DIR=C:/Users/you/your-docs`. Use `DEPLOY_COMMAND` if your site uses something else, for example `mkdocs gh-deploy`.
+4. Restart the connector (or Claude) so it picks up the new setting.
+
+Then publish and deploy in one request:
+
+> Write a FAQ tutorial, publish it as `faq`, and deploy the site.
+
+Claude publishes the page, then calls `deploy_site`, which reports the end of the build output. A deploy takes a minute or two.
+
+:::note
+`deploy_site` publishes only what is on `DOCS_BRANCH`. A change waiting in a pull request goes live after you merge it and deploy again.
+:::
+
 ## What Claude can do
 
 | Tool | What it does |
@@ -149,13 +187,14 @@ With `as_pull_request`, the connector pushes to a new `claude/...` branch and op
 | `publish_tutorial` | Creates a tutorial or fully replaces one |
 | `edit_tutorial` | Replaces one exact piece of text in a tutorial |
 | `delete_tutorial` | Removes a tutorial |
+| `deploy_site` | Rebuilds the site from `DOCS_BRANCH` and publishes it |
 
 Tutorial paths are relative to `DOCS_DIR` and written without an extension: `guides/webhooks` becomes `docs/guides/webhooks.md`. Paths may contain only letters, numbers, `-`, `_`, `.` and `/`, and can't escape the docs folder.
 
 Some prompts to try:
 
 - "Write a tutorial on setting up webhooks and publish it as `guides/webhooks` via a pull request."
-- "In the install tutorial, change the Node requirement to 20+."
+- "In the install tutorial, change the Node requirement to 20+, then deploy the site."
 - "Read the hello tutorial and tighten the wording."
 
 ## Troubleshooting
@@ -173,6 +212,12 @@ Some prompts to try:
 **`Base branch ... not found`** when opening a PR: the repo is still empty. Publish once without a pull request first.
 
 **`old_text matches N places`** from `edit_tutorial`: the text to replace isn't unique. Ask Claude to include more surrounding text.
+
+**`Deploying is not configured`**: `SITE_DIR` isn't set, or the connector hasn't restarted since you set it.
+
+**`git pull --ff-only ... failed`**: the clone in `SITE_DIR` has local commits that aren't on GitHub. Push them, or reset the clone to match GitHub, then deploy again.
+
+**`npm run deploy` failed**: read the build output in Claude's reply. A broken link or invalid Markdown stops the build. An authentication error means Git on that computer can't push to the repo; run `npm run deploy` yourself once to sign in.
 
 ## Next steps
 
