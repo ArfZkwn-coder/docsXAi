@@ -12,7 +12,7 @@ It takes about five minutes.
 
 ## Video demo
 
-Watch the whole flow in about a minute: requesting access on Telegram, adding the connector in claude.ai, testing it, and publishing a tutorial that goes live on this site. Captions are in English and Malay.
+Watch the whole flow in just over a minute: requesting access on Telegram, adding the connector in claude.ai, testing it, publishing a tutorial that goes live on this site by itself, and adding a photo to it. Captions are in English and Malay.
 
 <video controls preload="metadata" playsinline width="100%" poster="/docsXAi/img/set-up-in-claude/demo-poster.jpg" src="/docsXAi/videos/docsxai-demo.mp4">
   Your browser can't play this video.
