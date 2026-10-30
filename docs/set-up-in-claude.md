@@ -10,6 +10,16 @@ This guide is for team members who want to write and edit tutorials on this site
 
 It takes about five minutes.
 
+## Video demo
+
+Watch the whole flow in about a minute: requesting access on Telegram, adding the connector in claude.ai, testing it, and publishing a tutorial that goes live on this site. Captions are in English and Malay.
+
+<video controls preload="metadata" playsinline width="100%" poster="/docsXAi/img/set-up-in-claude/demo-poster.jpg" src="/docsXAi/videos/docsxai-demo.mp4">
+  Your browser can't play this video.
+</video>
+
+The names, chat ID and URL in the video are examples.
+
 ## Before you start
 
 You need:
