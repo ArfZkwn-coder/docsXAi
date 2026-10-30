@@ -15,11 +15,11 @@ It takes about five minutes.
 You need:
 
 - **A Claude account** that can add custom connectors, at [claude.ai](https://claude.ai).
-- **Telegram**, to request access from the site owner's bot. Ask the site owner for the bot's username.
+- **Telegram**, to request access from the site's bot, [@ArifDocsAgentic_bot](https://t.me/ArifDocsAgentic_bot).
 
 ## Step 1: Request access on Telegram
 
-1. Open the site owner's bot in Telegram and press **Start**.
+1. Open **[@ArifDocsAgentic_bot](https://t.me/ArifDocsAgentic_bot)** in Telegram and press **Start**. On a computer, the link opens Telegram Desktop or Telegram Web.
 2. Send:
 
    ```text
