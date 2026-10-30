@@ -11,9 +11,18 @@ here too, so tutorials Claude publishes go live on the next deploy.
 
 ## Deploying
 
-`.github/workflows/deploy.yml` builds and publishes the site on every push to `main`.
+The site is served from the `gh-pages` branch (**Settings → Pages → Source: Deploy from a branch**,
+branch `gh-pages`, folder `/ (root)`). To publish changes, including new tutorials, build and push it
+from your machine:
 
-One-time setup: in the repo, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+```bash
+GIT_USER=ArfZkwn-coder npm run deploy
+```
+
+On Windows PowerShell: `$env:GIT_USER="ArfZkwn-coder"; npm run deploy`
+
+`.github/workflows/deploy.yml` can deploy automatically on every push to `main` instead, once GitHub
+Actions is available on the account: switch **Source** to **GitHub Actions**.
 
 ## Working locally
 

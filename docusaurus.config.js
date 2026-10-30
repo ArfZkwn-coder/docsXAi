@@ -14,6 +14,7 @@ const config = {
   baseUrl: `/${repo}/`,
   organizationName: owner,
   projectName: repo,
+  deploymentBranch: "gh-pages", // `npm run deploy` publishes the build here
   trailingSlash: false,
 
   onBrokenLinks: "throw",
