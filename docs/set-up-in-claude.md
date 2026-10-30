@@ -92,49 +92,6 @@ Tips for good results:
 - **Give Claude your material.** Paste notes, steps or screenshots into the chat; Claude writes a better tutorial from real details.
 - **Read before you approve.** With **Needs approval**, check the text Claude is about to publish.
 
-## What happens after you publish
-
-What happens next depends on whether the site owner has marked you as **trusted**:
-
-| You are | Your changes | When they're on the site |
-| --- | --- | --- |
-| **Reviewed** (the default) | Become a **pull request**, a proposed change the owner reviews | After the owner merges and deploys it |
-| **Trusted** | Go straight onto the site | About a minute later, automatically |
-
-You can tell which one happened from Claude's reply:
-
-- **"Pull request: …"** means your change is waiting for review. Its title ends with your name, for example `docs: publish "Webhooks" (by alice)`.
-- **"The site is being deployed and will be live in a minute or two"** means it's going live now. Refresh the page after a minute to see it.
-
-Either way, every change records who asked for it.
-
-## For site owners: managing access
-
-People request access through your Telegram bot, and you manage everything by replying to it. Only your own chat can use these commands:
-
-| Command | What it does |
-| --- | --- |
-| `/approve CHAT_ID NAME` | Creates a key for that person and sends them their URL. The bot gives you this command, ready to send, when someone asks for access. |
-| `/trust NAME` | Their changes publish directly and go live automatically. |
-| `/untrust NAME` | Back to pull requests that you review. |
-| `/revoke NAME` | Turns their URL off immediately. |
-| `/list` | Shows who has access. |
-| `/myid` | Shows your own chat ID. |
-
-Only trust people whose changes you're happy to see on the live site without checking first. Everything takes effect immediately, with nothing to restart.
-
-You can also manage keys on the server that runs the connector:
-
-```bash
-docker exec docs-publisher node src/keys-cli.js add alice --trusted
-```
-
-```bash
-docker exec docs-publisher node src/keys-cli.js list
-```
-
-The same tool has `trust`, `untrust` and `remove`.
-
 ## Troubleshooting
 
 **The bot doesn't reply to `/access`**: make sure you pressed **Start** first. If it still says nothing, ask the site owner to check the bot.
