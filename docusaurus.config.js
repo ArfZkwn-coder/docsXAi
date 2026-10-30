@@ -57,7 +57,7 @@ const config = {
         links: [
           {
             title: "Docs",
-            items: [{ label: "Getting Started", to: "/docs/getting-started" }],
+            items: [{ label: "Set Up the Connector in Claude", to: "/docs/set-up-in-claude" }],
           },
           {
             title: "More",

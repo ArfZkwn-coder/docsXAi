@@ -31,7 +31,7 @@ export default function Home() {
           </Heading>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
-            <Link className="button button--secondary button--lg" to="/docs/getting-started">
+            <Link className="button button--secondary button--lg" to="/docs/set-up-in-claude">
               Get started
             </Link>
           </div>

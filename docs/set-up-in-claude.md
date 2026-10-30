@@ -110,7 +110,7 @@ If you see a list like this, you're set up. If you get an error, see [Troublesho
 Ask in plain words. Claude picks the right tool:
 
 - "Write a beginner tutorial on setting up webhooks and publish it as `guides/webhooks`."
-- "Read the getting-started tutorial and fix any spelling mistakes."
+- "Read the nasi lemak tutorial and fix any spelling mistakes."
 - "In the FAQ, add a question about password resets."
 - "Delete the old `guides/legacy-api` tutorial."
 
