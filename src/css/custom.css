@@ -1,0 +1,24 @@
+/* Site-wide theme overrides for Infima, Docusaurus's CSS framework. */
+
+:root {
+  --ifm-color-primary: #4f46e5;
+  --ifm-color-primary-dark: #3f37d9;
+  --ifm-color-primary-darker: #3b33cc;
+  --ifm-color-primary-darkest: #3029a8;
+  --ifm-color-primary-light: #635bf0;
+  --ifm-color-primary-lighter: #6f68f1;
+  --ifm-color-primary-lightest: #928cf4;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #8b85f7;
+  --ifm-color-primary-dark: #6f68f5;
+  --ifm-color-primary-darker: #615af4;
+  --ifm-color-primary-darkest: #3a31f0;
+  --ifm-color-primary-light: #a7a2f9;
+  --ifm-color-primary-lighter: #b5b1fa;
+  --ifm-color-primary-lightest: #dedcfd;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
