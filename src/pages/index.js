@@ -15,8 +15,8 @@ const features = [
     body: "Changes can arrive as pull requests, so nothing goes live until you merge.",
   },
   {
-    title: "Publishes itself",
-    body: "Every commit to main rebuilds this site and deploys it to GitHub Pages.",
+    title: "Publishes in one step",
+    body: "One command rebuilds this site and deploys it to GitHub Pages.",
   },
 ];
 
