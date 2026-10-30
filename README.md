@@ -7,6 +7,8 @@ Team members write and edit tutorials by chatting with Claude through the docs-p
 [Set Up the Connector in Claude](https://arfzkwn-coder.github.io/docsXAi/docs/set-up-in-claude) explains
 how to get access.
 
+The connector's source code is in [docs-publisher-mcp](https://github.com/ArfZkwn-coder/docs-publisher-mcp).
+
 ## Layout
 
 | Path | Contents |
