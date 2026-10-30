@@ -20,6 +20,9 @@ You need:
 ## Step 1: Request access on Telegram
 
 1. Open **[@ArifDocsAgentic_bot](https://t.me/ArifDocsAgentic_bot)** in Telegram and press **Start**. On a computer, the link opens Telegram Desktop or Telegram Web.
+
+   ![Telegram page of the access bot with the Start Bot button](/img/set-up-in-claude/step-1-bot.png)
+
 2. Send:
 
    ```text
@@ -43,14 +46,21 @@ The long code at the end of the URL is your personal key. Anyone who has your UR
 1. Go to [claude.ai](https://claude.ai) and sign in.
 2. Click **Customize** in the left sidebar, then **Connectors**. (**Settings → Connectors** also leads here.)
 
+The Connectors page lists the connectors you already have. The **+ Add** button at the top right is where you add a new one:
+
+![The Connectors page in claude.ai with the Add menu open](/img/set-up-in-claude/step-2-connectors.png)
+
 ## Step 3: Add the connector
 
 1. Click **+ Add**, then **Add custom connector**.
 2. Fill in the form:
    - **Name:** `docs-publisher`
-   - **URL:** paste your personal connector URL from Telegram, all of it, with no spaces.
-   - Leave the OAuth and advanced settings empty.
-3. Click **Add**.
+   - **MCP server URL:** paste your personal connector URL from Telegram, all of it, with no spaces.
+   - Leave any OAuth or advanced settings empty.
+
+   ![The Add custom connector form filled in with an example name and URL](/img/set-up-in-claude/step-3-form.png)
+
+3. Click **Continue**, and confirm if Claude asks you to.
 
 Claude shows **Connected to docs-publisher**, and the connector appears under **Yours** with six tools.
 
@@ -66,6 +76,10 @@ Each tool can be set to **Allow** (Claude uses it freely), **Needs approval** (C
 | Edit tutorial | Changes part of a page | Needs approval |
 | Delete tutorial | Removes a page | Needs approval |
 | Deploy site | Rebuilds the live site from approved changes | Needs approval |
+
+Each tool has three buttons on the right: a tick for **Allow**, a hand for **Needs approval** and a circle with a line for **Blocked**. The dropdown at the top sets all six at once:
+
+![Tool permissions for the connector in claude.ai](/img/set-up-in-claude/step-4-permissions.png)
 
 With **Needs approval**, Claude shows exactly what it's about to send before anything changes, so you can check it.
 
