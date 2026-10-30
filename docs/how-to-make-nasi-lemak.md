@@ -8,6 +8,10 @@ sidebar_position: 3
 
 Nasi lemak is Malaysia's best-loved breakfast: rice cooked in coconut milk and pandan, served with a spicy-sweet sambal, crispy anchovies and peanuts, egg and cucumber. This tutorial walks you through making a classic plate from scratch.
 
+![Nasi lemak in its basic form: coconut rice with sambal, fried anchovies, cucumber and boiled egg](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Nasi_lemak_basic.jpg/640px-Nasi_lemak_basic.jpg)
+
+*A basic plate of nasi lemak. Photo credit: see [Photo credits](#photo-credits).*
+
 **Serves:** 4  
 **Time:** about 1 hour 15 minutes
 
@@ -105,6 +109,14 @@ Scoop a mound of coconut rice onto each plate. Add a generous spoonful of sambal
 - **Vegetarian.** Leave out the anchovies and belacan, and add more peanuts and a dash of soy sauce to the sambal for depth.
 - **Spice level.** For a milder sambal, use fewer dried chillies or deseed them thoroughly.
 
+![Nasi lemak wrapped in banana leaf](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Nasi_lemak_01a.jpg/640px-Nasi_lemak_01a.jpg)
+
+*Nasi lemak is traditionally wrapped in banana leaf.*
+
+![Alor Setar-style nasi lemak served with curry and omelette](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nasi_Lemak_Utara.jpg/640px-Nasi_Lemak_Utara.jpg)
+
+*A northern (Alor Setar) style plate, served with curry and an omelette.*
+
 ## Storing and reheating
 
 - Keep the rice, sambal and sides in separate containers in the fridge for up to 2 days.
@@ -115,3 +127,11 @@ Scoop a mound of coconut rice onto each plate. Add a generous spoonful of sambal
 
 - Make the sambal in a double batch. It freezes well in small portions.
 - Try pairing nasi lemak with a cup of teh tarik for the full Malaysian breakfast.
+
+## Photo credits
+
+The photos on this page are hosted on Wikimedia Commons under free licenses. The author and exact license of each photo are listed on its file page:
+
+- [Nasi lemak basic.jpg](https://commons.wikimedia.org/wiki/File:Nasi_lemak_basic.jpg)
+- [Nasi lemak 01a.jpg](https://commons.wikimedia.org/wiki/File:Nasi_lemak_01a.jpg)
+- [Nasi Lemak Utara.jpg](https://commons.wikimedia.org/wiki/File:Nasi_Lemak_Utara.jpg)
