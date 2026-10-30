@@ -75,7 +75,11 @@ Start a new chat and send:
 
 > Using the docs-publisher connector, list the tutorials in my docs.
 
-Claude replies with the site's pages, for example `docs/getting-started.md`. If it does, you're set up. If you get an error, see [Troubleshooting](#troubleshooting).
+Claude uses the connector and replies with the site's pages. It should look like this; the list will match the site's current pages, and the connector name is whatever you entered in Step 3:
+
+![Claude listing the tutorials on this site with the docs-publisher connector](/img/set-up-in-claude/step-5-test.png)
+
+If you see a list like this, you're set up. If you get an error, see [Troubleshooting](#troubleshooting).
 
 ## Writing and editing tutorials
 
