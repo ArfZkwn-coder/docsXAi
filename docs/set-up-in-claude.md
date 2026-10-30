@@ -72,7 +72,7 @@ The Connectors page lists the connectors you already have. The **+ Add** button 
 
 3. Click **Continue**, and confirm if Claude asks you to.
 
-Claude shows **Connected to docs-publisher**, and the connector appears under **Yours** with six tools.
+Claude shows **Connected to docs-publisher**, and the connector appears under **Yours** with seven tools.
 
 ## Step 4: Choose what Claude may do without asking
 
@@ -85,13 +85,14 @@ Each tool can be set to **Allow** (Claude uses it freely), **Needs approval** (C
 | Publish tutorial | Adds a new page or replaces one | Needs approval |
 | Edit tutorial | Changes part of a page | Needs approval |
 | Delete tutorial | Removes a page | Needs approval |
-| Deploy site | Rebuilds the live site from approved changes | Needs approval |
+| Upload image | Saves a picture from a web link into the site | Needs approval |
+| Deploy site | Rebuilds the live site by hand (not usually needed) | Needs approval |
 
-Each tool has three buttons on the right: a tick for **Allow**, a hand for **Needs approval** and a circle with a line for **Blocked**. The dropdown at the top sets all six at once:
+Each tool has three buttons on the right: a tick for **Allow**, a hand for **Needs approval** and a circle with a line for **Blocked**. The dropdown at the top sets all seven at once:
 
 ![Tool permissions for the connector in claude.ai](/img/set-up-in-claude/step-4-permissions.png)
 
-With **Needs approval**, Claude shows exactly what it's about to send before anything changes, so you can check it.
+With **Needs approval**, Claude shows exactly what it's about to send before anything changes, so you can check it. Every change goes live on the site by itself a minute or two later, so this is your chance to review it.
 
 ## Step 5: Test it
 
@@ -113,12 +114,14 @@ Ask in plain words. Claude picks the right tool:
 - "Read the nasi lemak tutorial and fix any spelling mistakes."
 - "In the FAQ, add a question about password resets."
 - "Delete the old `guides/legacy-api` tutorial."
+- "Add this photo to the nasi lemak tutorial: https://upload.wikimedia.org/... and credit its author."
 
 Tips for good results:
 
 - **Say where it goes.** A path like `guides/webhooks` puts the page in the `guides` section of the sidebar.
 - **Give Claude your material.** Paste notes, steps or screenshots into the chat; Claude writes a better tutorial from real details.
 - **Read before you approve.** With **Needs approval**, check the text Claude is about to publish.
+- **Use pictures you may reuse.** Upload image saves a copy of the picture on this site. Use your own photos or ones with a free license, and ask Claude to credit the author when the license asks for it.
 
 ## Troubleshooting
 
@@ -132,6 +135,8 @@ Tips for good results:
 
 **A GitHub error such as "Bad credentials" or "failed (401)"**: the problem is on the server side. Tell the site owner; there's nothing to fix in your Claude settings.
 
-**My change isn't on the live site**: if Claude gave you a pull request link, it's waiting for the owner's review. If Claude said the site is being deployed, wait a minute or two and refresh. A changed page can stay cached in your browser for a while.
+**My change isn't on the live site**: wait a minute or two after Claude says the site is being deployed, then refresh. A changed page can stay cached in your browser for a while.
+
+**Upload image fails**: the link must start with `https://` and open the picture itself (a JPEG, PNG, GIF or WebP file up to 5 MB), not a web page that shows it. On Wikimedia Commons, open the file page and copy the link of the image, not the page address.
 
 **I shared my URL by mistake**: tell the site owner. They can revoke your key and approve you again, which sends you a new URL. Then update the URL on your connector in claude.ai, or remove it and add it again.
