@@ -8,6 +8,10 @@ sidebar_position: 3
 
 Nasi lemak is Malaysia's best-loved breakfast: rice cooked in coconut milk and pandan, served with a spicy-sweet sambal, crispy anchovies and peanuts, egg and cucumber. This tutorial walks you through making a classic plate from scratch.
 
+![Nasi lemak in its basic form: coconut rice with sambal, fried anchovies, cucumber and boiled egg](/img/nasi-lemak/nasi-lemak-basic.jpg)
+
+*A basic plate of nasi lemak. Photo: Craig, CC BY 3.0 (see [Photo credits](#photo-credits)).*
+
 **Serves:** 4  
 **Time:** about 1 hour 15 minutes
 
@@ -105,6 +109,14 @@ Scoop a mound of coconut rice onto each plate. Add a generous spoonful of sambal
 - **Vegetarian.** Leave out the anchovies and belacan, and add more peanuts and a dash of soy sauce to the sambal for depth.
 - **Spice level.** For a milder sambal, use fewer dried chillies or deseed them thoroughly.
 
+![Nasi lemak with sambal and fried fish on an opened banana leaf wrap](/img/nasi-lemak/nasi-lemak-banana-leaf.jpg)
+
+*Nasi lemak is traditionally wrapped in banana leaf. Photo: Takeaway, CC BY-SA 3.0.*
+
+![Northern-style nasi lemak with sambal, next to a bowl of chicken curry](/img/nasi-lemak/nasi-lemak-utara.jpg)
+
+*A northern-style plate, served with chicken curry. Photo: Kutubkhanah, CC BY-SA 4.0.*
+
 ## Storing and reheating
 
 - Keep the rice, sambal and sides in separate containers in the fridge for up to 2 days.
@@ -115,3 +127,11 @@ Scoop a mound of coconut rice onto each plate. Add a generous spoonful of sambal
 
 - Make the sambal in a double batch. It freezes well in small portions.
 - Try pairing nasi lemak with a cup of teh tarik for the full Malaysian breakfast.
+
+## Photo credits
+
+The photos on this page come from Wikimedia Commons. They are resized to 960 pixels wide, and the northern-style photo is cropped to a landscape shape.
+
+- **Basic plate:** [Nasi lemak basic.jpg](https://commons.wikimedia.org/wiki/File:Nasi_lemak_basic.jpg) by Craig, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- **Banana leaf:** [Nasi lemak 01a.jpg](https://commons.wikimedia.org/wiki/File:Nasi_lemak_01a.jpg) by Takeaway, licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- **Northern style:** [Nasi Lemak Utara.jpg](https://commons.wikimedia.org/wiki/File:Nasi_Lemak_Utara.jpg) by Kutubkhanah, licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
